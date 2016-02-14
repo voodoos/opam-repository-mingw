@@ -1,0 +1,11 @@
+title: OCaml for Windows
+name: OCaml for Windows
+url: https://fdopen.github.io/opam-repository-mingw
+description: a customized opam repository for windows
+
+baseurl: /opam-repository-mingw
+permalink: /:year/:month/:day/:title/
+paginate: 10
+highlighter: rouge
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
