@@ -10,5 +10,5 @@ for this repository. The confusing information inside the README.md
 have been moved to dedicated pages here.
 
 Major changes to the opam builds or the repository will be announced
-here. Subscribe to the [RSS-Feed](/feed.xml) to stay updated on the
+here. Subscribe to the [RSS-Feed]({{site.baseurl}}/feed.xml) to stay updated on the
 developments.
