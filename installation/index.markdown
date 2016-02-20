@@ -10,9 +10,9 @@ There are two ways to setup this opam repository:
 You can try the graphical installer:
 
 * [32-bit](https://dl.dropboxusercontent.com/s/2y1hkzl7l8kedcn/OCaml32.exe)
-  (updated 14. Feb 2016)
+  (updated 20. Feb 2016)
 * [64-bit](https://dl.dropboxusercontent.com/s/d41lodwfm3cku7n/OCaml64.exe)
-  (updated 14. Feb 2016)
+  (updated 20. Feb 2016)
 
 The installer will first create a customized cygwin environment and
 then set up opam and OCaml inside this environment. The setup should
@@ -26,9 +26,9 @@ version of cygwin and then download a 32-bit version of OCaml; the
 
 * Download links:
   * [32-bit](https://dl.dropboxusercontent.com/s/eo4igttab8ipyle/opam32.tar.xz)
-    (updated 14. Feb 2016)
+    (updated 20. Feb 2016)
   * [64-bit](https://dl.dropboxusercontent.com/s/b2q2vjau7if1c1b/opam64.tar.xz)
-    (updated 14. Feb 2016)
+    (updated 20. Feb 2016)
 
 * Install [cygwin](https://cygwin.com/) and install the following
   additional packages through cywin's setup utility: rsync, patch,
