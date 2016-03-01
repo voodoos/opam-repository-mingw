@@ -1,19 +1,43 @@
----
-layout: default
----
-<article>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ site.title }} - {{ page.title }}</title>
+    <meta charset='utf-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'/>
+    <link href='{{ site.baseurl }}/assets/style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <img src="{{ site.baseurl }}/assets/images/colour-logo.svg" width="240" style="float: right; margin: 20px;" />
+    <nav id='sidebar'>
+      <h1>{{ site.title }}</h1>
+      <ul id='links'>
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
+        <li><a href="{{ site.baseurl }}/installation/">Installation</a></li>
+        <li><a href="{{ site.baseurl }}/depext-cygwin/">Depext</a></li>
+        <li><a href="{{ site.baseurl }}/packages/">Packages</a></li>
+        <li><a href="{{ site.baseurl }}/cygwin/">Cygwin</a></li>
+        <li><a href="{{ site.baseurl }}/archives/">Archive</a></li>
+        <li><a href="https://github.com/fdopen/opam-repository-mingw/issues">Contact</a></li>
+        <li><a href="{{ site.baseurl }}/feed.xml">RSS Feed</a></li>
+      </ul>
+    </nav>
+    <section>
+      <article>
 
 	{% if page.external-url %}
-		<h1>
-			<a href="{{ page.external-url }}">{{ page.title }}</a> 
-			<a class="anchor" href="{{ page.url }}"><i class="icon-anchor"></i></a>
-		</h1>
+	<h1>
+	  <a href="{{ page.external-url }}">{{ page.title }}</a> 
+	  <a class="anchor" href="{{ page.url }}"><i class="icon-anchor"></i></a>
+	</h1>
 	{% else %}
-		<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+	<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
 	{% endif %}
 
 	<div class="post-content">{{ content }}</div>
-
+        <hr />
 	<p class="meta">Posted on <span class="postdate">{{ page.date | date: "%b %d, %Y" }}</span></p>
 
-</article>
+      </article>
+    </section>
+  </body>
+</html>

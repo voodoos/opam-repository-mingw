@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "First beta of OCaml version 4.03.0"
+date:   2016-03-01 19:00:00
+---
+
+The release of OCaml version 4.03.0 is drawing near. A first beta
+version was released
+[yesterday](http://yquem.inria.fr/pipermail/caml-announce/2016-February/000013.html).
+
+You can install it with `opam switch 4.03.0+beta1+mingw32` or `opam
+switch 4.03.0+beta1+mingw64`.
