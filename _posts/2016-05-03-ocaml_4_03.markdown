@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "OCaml 4.03.0"
+date:   2016-05-03 12:00:00
+---
+
+OCaml version 4.03.0 is now officially supported. There are four different switches:
+
+- `4.03.0+mingw32`
+- `4.03.0+mingw64`
+- `4.03.0+flambda+mingw32`
+- `4.03.0+flambda+mingw64`
+
+You can also install the pre-compiled binaries by adding a suffix-`c` to the
+switch, e.g `opam switch 4.03.0+mingw64c`. Bootstrapping is much
+faster this way, but the binaries might not work any longer, if the
+maintainers of the cygwin repository update their mingw64-gcc packages.
