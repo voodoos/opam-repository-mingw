@@ -71,6 +71,6 @@ There are also mingw-versions for the obsolete
 
 ## Next Step
 
-Install `depext` and [depext-cygwinports](/depext-cygwin), if you want
+Install `depext` and [depext-cygwinports](/opam-repository-mingw/depext-cygwin), if you want
 to use libraries like [pcre](https://github.com/mmottl/pcre-ocaml) or
 [lablgtk](http://lablgtk.forge.ocamlcore.org/).
