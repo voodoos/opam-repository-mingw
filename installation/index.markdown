@@ -9,10 +9,10 @@ There are two ways to setup this opam repository:
 
 You can try the graphical installer:
 
-* [32-bit](https://dl.dropboxusercontent.com/s/2y1hkzl7l8kedcn/OCaml32.exe)
-  (updated 08. Feb 2017)
-* [64-bit](https://dl.dropboxusercontent.com/s/d41lodwfm3cku7n/OCaml64.exe)
-  (updated 08. Feb 2017)
+* [32-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.1/OCaml32.exe)
+  (updated 05. Mar 2017)
+* [64-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.1/OCaml64.exe)
+  (updated 05. Mar 2017)
 
 The installer will first create a customized cygwin environment and
 then set up opam and OCaml inside this environment. The setup should
@@ -25,10 +25,10 @@ version of cygwin and then download a 32-bit version of OCaml; the
 ## Manual Installation
 
 * Download links:
-  * [32-bit](https://dl.dropboxusercontent.com/s/eo4igttab8ipyle/opam32.tar.xz)
-    (updated 08. Feb 2017)
-  * [64-bit](https://dl.dropboxusercontent.com/s/b2q2vjau7if1c1b/opam64.tar.xz)
-    (updated 08. Feb 2017)
+  * [32-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.1/opam32.tar.xz)
+    (updated 05. Mar 2017)
+  * [64-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.1/opam64.tar.xz)
+    (updated 05. Mar 2017)
 
 * Install [cygwin](https://cygwin.com/) and install the following
   additional packages through cywin's setup utility: rsync, patch,
