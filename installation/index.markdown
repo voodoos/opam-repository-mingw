@@ -10,17 +10,16 @@ There are two ways to setup this opam repository:
 You can try the graphical installer:
 
 * [32-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.1/OCaml32.exe)
-  (updated 04. Nov 2017)
+  (updated 15. Jan 2018)
 * [64-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.1/OCaml64.exe)
-  (updated 04. Nov 2017)
+  (updated 15. Jan 2018)
 
 The installer will first create a customized cygwin environment and
 then set up opam and OCaml inside this environment. The setup should
 be easy and fast this way. However, the installer won't allow you to
 set custom options: proxy configuration, select the initial OCaml
-version to install, etc. The 32-bit version will install a 32-bit
-version of cygwin and then download a 32-bit version of OCaml; the
-64-bit version will download 64-bit versions of both toolchains.
+version to install, etc. (If possible, the 64-bit version of cygwin is
+installed. The 32-bit version is not longer recommended)
 
 ## Manual Installation
 
