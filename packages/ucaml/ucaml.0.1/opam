@@ -1,0 +1,10 @@
+opam-version: "1.2"
+authors: ["Masateru Kawaguchi"]
+maintainer: "unixjunkie@sdf.org"
+homepage: "https://github.com/masateruk/micro-caml"
+license: "BSD-3"
+build: [
+  ["make"]
+]
+dev-repo: "git://github.com/masateruk/micro-caml"
+available: os != "win32"

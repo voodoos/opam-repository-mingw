@@ -1,0 +1,25 @@
+opam-version: "1.2"
+maintainer: "hez@0ok.org"
+authors: [ "Stevan Little" ]
+license: "LGPL-2.1 with OCaml linking exception"
+homepage: "https://github.com/hcarty/ocaml-testsimple"
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+]
+remove: [
+  ["ocamlfind" "remove" "testsimple"]
+]
+depends: [
+  "batteries"
+  "ocamlfind"
+  "ocamlbuild" {build}
+]
+depexts: [
+  [["debian"] ["perl"]]
+  [["ubuntu"] ["perl"]]
+]
+patches: "patch-oasis-testsimple.0.3.1" {os = "win32"}
+dev-repo: "git://github.com/hcarty/ocaml-testsimple"
+install: ["ocaml" "setup.ml" "-install"]
+available: [ocaml-version < "4.06.0"]

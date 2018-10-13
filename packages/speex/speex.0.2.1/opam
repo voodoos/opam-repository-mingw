@@ -1,0 +1,31 @@
+opam-version: "1.2"
+maintainer: "Romain Beauxis <toots@rastageeks.org>"
+authors: "The Savonet Team <savonet-users@lists.sourceforge.net>"
+homepage: "https://github.com/savonet/ocaml-speex"
+build: [
+  ["./configure" "--prefix" prefix]
+  [make]
+]
+install: [
+  [make "install"]
+]
+remove: ["ocamlfind" "remove" "speex"]
+depends: [
+  "ocamlfind"
+  "ogg"
+]
+depexts: [
+  [["centos"] ["speex-devel"]]
+  [["fedora"] ["speex-devel"]]
+  [["opensuse"] ["speex-devel"]]
+  [["ubuntu"] ["libspeex-dev"]]
+  [["debian"] ["libspeex-dev"]]
+  [["win32" "cygwinports"] ["speex"]]
+]
+
+bug-reports: "https://github.com/savonet/ocaml-speex/issues"
+dev-repo: "https://github.com/savonet/ocaml-speex.git"
+patches: [
+  "ocaml-speex-0.2.1.patch" {os = "win32"}
+  "patch-ocamlmakefile-speex.0.2.1" {os = "win32"}
+]

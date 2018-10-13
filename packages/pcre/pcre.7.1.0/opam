@@ -1,0 +1,19 @@
+opam-version: "1.2"
+maintainer: "markus.mottl@gmail.com"
+authors: [ "Markus Mottl <markus.mottl@gmail.com>" ]
+homepage: "http://mmottl.github.io/pcre-ocaml"
+bug-reports: "https://github.com/mmottl/pcre-ocaml/issues"
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix "--with-pcre-config" "bash pcre-config"] { os = "win32" }
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix] { os != "win32" }
+  ["ocaml" "setup.ml" "-build"]
+]
+remove: [["ocamlfind" "remove" "pcre"]]
+depends: [
+  "ocamlfind"
+  "conf-libpcre"
+  "ocamlbuild" {build & != "0.9.0"}
+]
+dev-repo: "git://github.com/mmottl/pcre-ocaml"
+install: [make "install"]
+available: [ocaml-version < "4.06.0"]

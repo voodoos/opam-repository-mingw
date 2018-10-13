@@ -1,0 +1,14 @@
+opam-version: "1.2"
+maintainer: "vb@luminar.eu.org"
+build: [
+  ["./configure" "--%{pcre:enable}%-pcre"]
+  [make]
+]
+remove: [["ocamlfind" "remove" "text"]]
+depends: [
+  "ocamlfind"
+  "ocamlbuild" {build}
+]
+depopts: ["pcre"]
+install: [make "install"]
+dev-repo: "git://github.com/vbmithr/ocaml-text"

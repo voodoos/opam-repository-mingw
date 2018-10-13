@@ -1,0 +1,23 @@
+opam-version: "1.2"
+maintainer: "vb@luminar.eu.org"
+authors: ["Vincent Bernardoff"]
+homepage: "https://github.com/vbmithr/qrencode-ocaml"
+build: [
+  ["oasis" "setup"]
+  [make]
+]
+remove: [
+  ["ocamlfind" "remove" "qrencode"]
+]
+depends: [
+  "ocamlfind"
+  "ocamlbuild" {build}
+  "oasis" {build}
+]
+depexts: [
+[ ["ubuntu"] ["libqrencode-dev" "libpng-dev"] ]
+[ ["debian"] ["libqrencode-dev" "libpng-dev"] ]
+]
+dev-repo: "git://github.com/vbmithr/qrencode-ocaml"
+install: [make "install"]
+available: [ocaml-version < "4.06.0"]

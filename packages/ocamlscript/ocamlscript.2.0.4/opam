@@ -1,0 +1,20 @@
+opam-version: "1.2"
+maintainer: "martin@mjambon.com"
+build: [
+  [make]
+]
+install: [
+  [make "install"]
+]
+remove: [["ocamlfind" "remove" "ocamlscript"]]
+depends: [
+ "ocamlfind"
+ "camlp4"
+ "cygwinpath"
+]
+
+patches: [
+  "patch-ocamlscript-2.0.3" { os = "win32" }
+  "patch-aa" { os = "win32" }
+]
+dev-repo: "git://github.com/mjambon/ocamlscript"

@@ -1,0 +1,24 @@
+opam-version: "1"
+maintainer: "blue-prawn"
+authors: ["Daniel Stenberg"]
+homepage: "http://curl.haxx.se/"
+license: "BSD-like"
+depends: [ "conf-pkg-config" ]
+build: [
+  ["pkg-config" "libcurl"] { os != "darwin" }
+]
+depends: [
+  "conf-pkg-config" { os != "darwin" }
+]
+depexts: [
+  [["debian"] ["libcurl4-gnutls-dev"]]
+  [["mageia"] ["libcurl-devel"]]
+  [["ubuntu"] ["libcurl4-gnutls-dev"]]
+  [["centos"] ["libcurl-devel" "openssl-devel"]]
+  [["nixpkgs"] ["curl"]]
+  [["archlinux"] ["curl"]]
+  [["win32" "cygwinports"] ["curl"]]
+  [["alpine"] ["curl-dev"]]
+  [["opensuse"] ["libcurl-devel"]]
+  [["fedora"] ["libcurl-devel"]]
+]

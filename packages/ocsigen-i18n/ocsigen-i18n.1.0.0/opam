@@ -1,0 +1,20 @@
+opam-version: "1.2"
+available: os != "win32" & (ocaml-version >= "4.03")
+name:         "ocsigen-i18n"
+version:      "1.0.0"
+maintainer:   "Julien Sagot julien.sagot@besport.com"
+
+homepage: "https://github.com/besport/ocsigen-i18n"
+bug-reports: "https://github.com/besport/ocsigen-i18n/issues"
+dev-repo: "https://github.com/besport/ocsigen-i18n.git"
+
+build:   [ make "build" ]
+install: [ make "bindir=%{bin}%" "install" ]
+remove:  [ ["rm" "-f" "%{bin}%/ocsigen-i18n-generator"]
+           ["rm" "-f" "%{bin}%/ocsigen-i18n-rewriter"]
+           ["rm" "-f" "%{bin}%/ocsigen-i18n-checker"] ]
+
+depends: [
+  "ocamlfind" { build }
+]
+authors: "Julien Sagot julien.sagot@besport.com"

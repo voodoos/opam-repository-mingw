@@ -1,0 +1,18 @@
+opam-version: "1.2"
+maintainer: "whitequark@whitequark.org"
+authors: "Maas-Maarten Zeeman"
+homepage: "https://github.com/whitequark/ocaml-expat"
+dev-repo: "https://github.com/whitequark/ocaml-expat.git"
+bug-reports: "https://github.com/whitequark/ocaml-expat/issues"
+build: [
+  [make "all"]
+  [make "allopt"]
+]
+remove: [["ocamlfind" "remove" "expat"]]
+depends: [
+ "ocamlfind" {build}
+ "conf-expat"
+]
+install: [make "install"]
+available: [ocaml-version >= "4.02.0"]
+patches: "ocaml-expat-1.1.0.patch" {os = "win32"}

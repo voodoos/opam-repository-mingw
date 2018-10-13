@@ -1,0 +1,24 @@
+opam-version: "1.2"
+maintainer: "Fabrice Le Fessant <fabrice.le_fessant@ocamlpro.com>"
+authors: [
+  "Fabrice Le Fessant <fabrice.le_fessant@ocamlpro.com>"
+  ]
+homepage: "http://www.typerex.org/ocp-build.html"
+dev-repo: "https://github.com/OCamlPro/typerex-build.git"
+bug-reports: "https://github.com/OCamlPro/typerex-build/issues"
+
+build: [
+  [ "./configure" "--prefix" "%{prefix}%"  ]
+  [ make ]
+  [ make "install" ]
+  ["sh.exe" "-c" "if [ -f '%{bin}%/ocp-build' ] && [ ! -f '%{bin}%/ocp-build.exe' ] ; then mv '%{bin}%/ocp-build' '%{bin}%/ocp-build.exe' ; fi" ] { os = "win32" }
+]
+remove: [
+  [ "rm" "-f" "%{prefix}%/bin/ocp-build" ]
+  [ "rm" "-rf" "%{prefix}%/lib/ocaml/typerex/ocp-build" ]
+  [ "sh" "-exc" "rmdir  %{prefix}%/lib/ocaml/typerex || true" ]
+  ]
+depends: [ "ocamlfind" "camlp4" ]
+conflicts: [ "typerex"  {< "1.99.7"} ]
+patches: [ "patch-aa" ]
+available: [ocaml-version < "4.03" ]

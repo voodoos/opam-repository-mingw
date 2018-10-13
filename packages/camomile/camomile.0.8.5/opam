@@ -1,0 +1,29 @@
+opam-version: "1.2"
+maintainer: "gregoire@ocamlpro.com"
+authors: ["Yoriyuki Yamagata"]
+homepage: "https://github.com/yoriyuki/Camomile/wiki"
+bug-reports: "https://github.com/yoriyuki/Camomile/issues"
+dev-repo: "https://github.com/yoriyuki/Camomile.git"
+license: "LGPL-2+ with OCaml linking exception"
+patches: [
+  "cmxs.patch" { os != "win32" }
+  "no-camlp4.patch" { os != "win32" }
+  "cmx.patch" { os != "win32" }
+  "camomile-0.8.5.patch" { os = "win32" }
+  "camomile-0.8.5-2.patch" { os = "win32" }
+  "4.05-typing-fix.patch"
+]
+build: [
+  ["./configure" "--prefix" prefix]
+  [make] {ocaml-native}
+  [make "byte" "unidata" "unimaps" "charmap_data" "locale_data"] {!ocaml-native}
+]
+install: [
+  [make "install"]
+]
+remove: [["ocamlfind" "remove" "camomile"]]
+depends: [
+  "ocamlfind" {build}
+  "cppo" {build}
+]
+available: [ ocaml-version < "4.06.0" ]

@@ -1,0 +1,28 @@
+opam-version: "1.2"
+maintainer: "smimram@gmail.com"
+authors: "The Savonet Team <savonet-users@lists.sourceforge.net>"
+homepage: "https://github.com/savonet"
+build: [
+  ["./configure" "--prefix" prefix]
+  [make]
+]
+install: [
+  [make "install"]
+]
+remove: ["ocamlfind" "remove" "ao"]
+depends: "ocamlfind"
+depexts: [
+  [["centos"] ["libao-devel"]]
+  [["fedora"] ["libao-devel"]]
+  [["opensuse"] ["libao-devel"]]
+  [["osx" "homebrew"] ["libao"]]
+  [["debian"] ["libao-dev"]]
+  [["ubuntu"] ["libao-dev"]]
+  [["win32" "cygwinports"] ["libao"]]
+  [["freebsd"] ["libao"]]
+  [["alpine"] ["libao-dev"]]
+]
+patches: [
+  "ocaml-ao-0.2.1.patch" {os = "win32"}
+  "patch-ocamlmakefile-ao.0.2.1" {os = "win32"}
+]

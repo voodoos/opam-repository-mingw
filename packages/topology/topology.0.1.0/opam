@@ -1,0 +1,17 @@
+opam-version: "1.2"
+maintainer: "arjun@cs.umass.edu"
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+]
+remove: [
+  ["ocamlfind" "remove" "topology"]
+]
+depends: [
+  "ocamlfind"
+  "ocamlgraph" {< "1.8.6"}
+  "ocamlbuild" {build}
+]
+patches: "patch-oasis-topology.0.1.0" {os = "win32"}
+install: ["ocaml" "setup.ml" "-install"]
+dev-repo: "git://github.com/frenetic-lang/ocaml-topology"

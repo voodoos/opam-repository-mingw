@@ -1,0 +1,22 @@
+opam-version: "1.2"
+maintainer: "roberto@dicosmo.org"
+build: [make "all" "opt"]
+remove: [
+ [make "uninstall" "DESTDIR=%{prefix}%" "OCAMLLIBDIR=lib" "BINDIR=bin" "LIBDIR=lib" "INCDIR=include"]
+]
+depends: [
+  "camlp4"
+  "conf-perl" {build}
+  ("extlib" | "extlib-compat")
+  "ocamlbuild" {build}
+]
+patches: [ "patch-aa" { os = "win32" } ]
+install: [
+  make
+  "install"
+  "DESTDIR=%{prefix}%"
+  "OCAMLLIBDIR=lib"
+  "BINDIR=bin"
+  "LIBDIR=lib"
+  "INCDIR=include"
+]

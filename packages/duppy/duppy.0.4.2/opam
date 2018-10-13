@@ -1,0 +1,13 @@
+opam-version: "1"
+maintainer: "smimram@gmail.com"
+build: [
+  ["./configure" "--prefix" prefix]
+  [make]
+]
+remove: [["ocamlfind" "remove" "duppy"]]
+depends: [
+  "ocamlfind"
+  "pcre"
+]
+install: [make "install"]
+available: [ocaml-version < "4.06.0"]

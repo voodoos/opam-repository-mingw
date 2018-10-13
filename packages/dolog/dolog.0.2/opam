@@ -1,0 +1,15 @@
+opam-version: "1.2"
+maintainer: "unixjunkie@sdf.org"
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+]
+remove: [["ocamlfind" "remove" "dolog"]]
+depends: [
+  "ocamlfind"
+  "base-unix"
+  "ocamlbuild" {build}
+]
+dev-repo: "git://github.com/HappyCrow/dolog"
+install: ["ocaml" "setup.ml" "-install"]
+available: [ocaml-version < "4.06.0"]

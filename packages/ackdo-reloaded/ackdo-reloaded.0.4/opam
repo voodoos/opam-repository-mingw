@@ -1,0 +1,13 @@
+opam-version: "1.2"
+maintainer: "rudi.grinberg@gmail.com"
+build: [make "build"]
+remove: [[make "opamuninstall"]]
+depends: [
+  "core"
+  "sexplib"
+  "textutils"
+  "kaputt"
+  "ocamlbuild" {build}
+]
+install: [make "opaminstall" "BINDIR=%{bin}%"]
+dev-repo: "git://github.com/rgrinberg/ackdo-reloaded"

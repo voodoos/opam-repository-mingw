@@ -1,0 +1,22 @@
+opam-version: "1.2"
+maintainer: "hez@0ok.org"
+authors: [ "Hezekiah M. Carty <hez@0ok.org>" ]
+license: "MIT"
+homepage: "https://github.com/hcarty/indexmap"
+build: [
+  ["oasis" "setup"]
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+]
+remove: [
+  ["ocamlfind" "remove" "indexMap"]
+]
+depends: [
+  "ocamlfind"
+  "ocamlbuild" {build}
+  "oasis" {build}
+]
+patches: "patch-oasis-indexmap.0.0.3" {os = "win32"}
+available: [ocaml-version >= "4.00.0" & ocaml-version < "4.06.0"]
+install: ["ocaml" "setup.ml" "-install"]
+dev-repo: "git://github.com/hcarty/indexmap"

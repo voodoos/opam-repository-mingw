@@ -1,0 +1,13 @@
+opam-version: "1.2"
+maintainer: "john.else@citrix.com"
+build: make
+remove: [[make "PREFIX=%{prefix}%" "uninstall"]]
+depends: [
+  "obuild"
+  "lwt"
+  "ounit"
+]
+patches: ["obuild-workaround.patch"]
+available: ocaml-version >= "4.00.1"
+install: [make "PREFIX=%{prefix}%" "install"]
+dev-repo: "git://github.com/johnelse/ocaml-irc-client"

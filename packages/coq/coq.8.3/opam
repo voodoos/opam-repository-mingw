@@ -1,0 +1,23 @@
+opam-version: "1.2"
+maintainer: "https://github.com/ocaml/opam-repository/issues"
+build: [
+  [
+    "./configure"
+    "-camlp5dir"
+    "%{lib}%/camlp5"
+    "--prefix"
+    prefix
+    "-docdir"
+    doc
+  ]
+  [make "-j%{jobs}%" "world"]
+]
+depends: [
+  "camlp5"
+  "ocamlbuild" {build}
+  "num"
+]
+depopts: ["lablgtk"]
+patches: ["configure.patch"]
+available: ocaml-version < "4.02.0"
+install: [make "install"]

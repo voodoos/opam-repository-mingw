@@ -1,0 +1,24 @@
+opam-version: "1.2"
+maintainer: "vb@luminar.eu.org"
+authors: ["Vincent Bernardoff"]
+homepage: "http://github.com/vbmithr/ocaml-zbar"
+build: [
+  ["oasis" "setup"]
+  [make "PREFIX=%{prefix}%"]
+]
+remove: [
+  ["ocamlfind" "remove" "zbar"]
+  ["ocamlfind" "remove" "zbar_ctypes"]
+]
+depends: [
+  "lwt"
+  "ocamlbuild" {build}
+  "oasis" {build}
+]
+depopts: ["ctypes" "ctypes-foreign"]
+depexts: [
+[ ["ubuntu"] ["libzbar-dev"] ]
+[ ["debian"] ["libzbar-dev"] ]
+]
+install: [make "PREFIX=%{prefix}%" "install"]
+dev-repo: "git://github.com/vbmithr/ocaml-zbar"

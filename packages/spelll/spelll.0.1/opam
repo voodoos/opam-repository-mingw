@@ -1,0 +1,20 @@
+opam-version: "1.2"
+maintainer: "simon.cruanes@inria.fr"
+build: [
+  ["./configure" "--docdir" "%{doc}%/spelll/"]
+  [make "all"]
+]
+remove: [
+    ["ocamlfind" "remove" "spelll"]
+]
+depends: [
+  "ocamlfind"
+  "ocamlbuild" {build}
+]
+tags: [ "spell" "levenshtein" "automaton" ]
+homepage: "https://github.com/c-cube/spelll"
+doc: "http://cedeela.fr/~simon/software/spelll/"
+patches: "patch-oasis-spelll.0.1" {os = "win32"}
+available: [ocaml-version >= "4.00.0" & ocaml-version < "4.06.0"]
+install: [make "install"]
+dev-repo: "git://github.com/c-cube/spelll"

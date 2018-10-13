@@ -1,0 +1,24 @@
+opam-version: "1.2"
+license: "LGPL-2.1 with OCaml linking exception"
+maintainer: "Kate <kit.ty.kate@disroot.org>"
+authors: [
+  "Kate <kit.ty.kate@disroot.org>"
+  "Eric Stokes <letaris@me.com>"
+]
+homepage: "https://github.com/kit-ty-kate/ocamldap"
+dev-repo: "https://github.com/kit-ty-kate/ocamldap.git"
+bug-reports: "https://github.com/kit-ty-kate/ocamldap/issues"
+patches: [
+  "ocaml-4.02.patch"
+]
+build: make
+remove: [["ocamlfind" "remove" "ldap"]]
+depends: [
+  "ocamlfind" {build}
+  "ocamlnet" {>= "3.6.0"}
+  "pcre"
+  "ssl"
+  "ocamlbuild" {build}
+]
+available: [ocaml-version >= "3.12.1" & ocaml-version < "4.06.0"]
+install: [make "install"]

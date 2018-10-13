@@ -1,0 +1,6 @@
+opam-version: "1"
+maintainer: "https://github.com/ocaml/opam-repository/issues"
+homepage: "https://github.com/samoht/ocaml-arg"
+build: [[make]]
+depends: ["ocamlfind" "ocamlbuild" {build}]
+available: [ocaml-version < "4.06.0"]

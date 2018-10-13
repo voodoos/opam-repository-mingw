@@ -1,0 +1,17 @@
+opam-version: "1.2"
+maintainer: "raphael.proust@cl.cam.ac.uk"
+authors: [ "Raphaël Proust" "Oscar Hellström" ]
+license: "BSD"
+build: make
+remove: [
+  [make "uninstall"]
+]
+build-doc: [
+  [make "htdoc"]
+]
+depends: [
+  "ocamlfind"
+]
+available: [ocaml-version >= "4.01.0" & ocaml-version < "4.06.0"]
+install: [make "install"]
+dev-repo: "git://github.com/raphael-proust/ocaml9p"

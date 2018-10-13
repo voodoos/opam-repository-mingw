@@ -1,0 +1,15 @@
+opam-version: "1.2"
+maintainer: "anil@recoil.org"
+author: "anil@recoil.org"
+homepage: "http://vim.org"
+bug-reports: "https://github.com/ocaml/opam-repository/issues"
+license: "charityware"
+build: [ ]
+depexts: [
+  [["debian"] ["vim-nox"]]
+  [["ubuntu"] ["vim-nox"]]
+  [["centos"]["vim"]]
+  [["rhel"] ["vim"]]
+  [["fedora"] ["vim"]]
+  [["oraclelinux"] ["vim"]]
+]

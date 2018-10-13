@@ -1,0 +1,28 @@
+opam-version: "1.2"
+maintainer: "Romain Beauxis <toots@rastageeks.org>"
+authors: "The Savonet Team <savonet-users@lists.sourceforge.net>"
+homepage: "https://github.com/savonet/ocaml-schroedinger"
+build: [
+  ["./configure" "--prefix" prefix]
+  [make]
+]
+install: [
+  [make "install"]
+]
+remove: ["ocamlfind" "remove" "schroedinger"]
+depends: [
+  "ocamlfind"
+  "ogg"
+]
+depexts: [
+ [["ubuntu"]["libschroedinger-dev"]]
+ [["debian"]["libschroedinger-dev"]]
+ [["osx" "homebrew"]["schroedinger"]]
+ [["win32" "cygwinports"] ["schroedinger1.0"]]
+]
+bug-reports: "https://github.com/savonet/ocaml-schroedinger/issues"
+dev-repo: "https://github.com/savonet/ocaml-schroedinger.git"
+patches: [
+  "ocaml-schroedinger-0.1.1.patch" {os = "win32"}
+  "patch-ocamlmakefile-schroedinger.0.1.1" {os = "win32"}
+]

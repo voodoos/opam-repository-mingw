@@ -1,0 +1,19 @@
+opam-version: "1.2"
+maintainer: "alessandro.strada@gmail.com"
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+]
+remove: [["ocamlfind" "remove" "gapi-ocaml"]]
+depends: [
+  "ocamlfind" {build}
+  ("extlib" | "extlib-compat")
+  "ocamlnet"
+  "ocurl"
+  "cryptokit"
+  "yojson"
+  "xmlm"
+  "ocamlbuild" {build}
+]
+install: ["ocaml" "setup.ml" "-install"]
+available: [ocaml-version < "4.06.0"]

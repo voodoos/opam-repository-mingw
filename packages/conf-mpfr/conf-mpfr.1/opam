@@ -1,0 +1,25 @@
+opam-version: "1.2"
+maintainer: "unixjunkie@sdf.org"
+homepage: "http://www.mpfr.org/"
+authors: "http://www.mpfr.org/credit.html"
+bug-reports: "https://github.com/ocaml/opam-repository/issues"
+license: "LGPL"
+build: [
+  ["cc" "test.c" "-I/usr/local/include" "-L/usr/local/lib" "-lgmp" "-lmpfr"] { os != "win32" }
+  ["./test-win.sh"] { os = "win32" }
+]
+depexts: [
+  [["debian"] ["libmpfr-dev"]]
+  [["ubuntu"] ["libmpfr-dev"]]
+  [["fedora"] ["mpfr-devel"]]
+  [["osx" "homebrew"] ["mpfr"]]
+  [["freebsd"] ["mpfr"]]
+  [["openbsd"] ["mpfr"]]
+  [["win32" "cygwinports"] ["mpfr"]]
+  [["alpine"] ["mpfr-dev"]]
+  [["centos"] ["mpfr-devel"]]
+  [["opensuse"] ["mpfr-devel"]]
+]
+depends: [
+  "conf-gmp"
+]

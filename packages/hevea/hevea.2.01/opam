@@ -1,0 +1,9 @@
+opam-version: "1.2"
+maintainer: "https://github.com/ocaml/opam-repository/issues"
+build: [make "PREFIX=%{prefix}%"]
+depends: [
+  "ocamlfind"
+  "ocamlbuild" {build}
+]
+install: [make "install"]
+available: ocaml-version < "4.06.0" & os != "win32"

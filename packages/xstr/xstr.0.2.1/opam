@@ -1,0 +1,10 @@
+opam-version: "1"
+maintainer: "https://github.com/ocaml/opam-repository/issues"
+build: [
+  [make "all"]
+  [make "opt"]
+]
+remove: [["ocamlfind" "remove" "xstr"]]
+depends: ["ocamlfind"]
+install: [make "install"]
+available: [ocaml-version < "4.06.0"]

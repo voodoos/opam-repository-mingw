@@ -1,0 +1,23 @@
+opam-version: "1.2"
+version: "2.5.2"
+authors: "Jun Furuse"
+maintainer: "jun.furuse@gmail.com"
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+]
+install: [
+  [ "ocaml" "setup.ml" "-install" ]
+]
+remove: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-uninstall"]
+]
+depends: [
+  "ocamlfind" { build }
+  "omake" { build & > "0.10.1" }
+  "ppx_test" { < "1.6.0" }
+]
+available: [
+  ocaml-version >= "4.02.0" & ocaml-version < "4.06.0"
+]

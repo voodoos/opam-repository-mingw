@@ -1,0 +1,15 @@
+opam-version: "1.2"
+maintainer: "contact@coherentgraphics.co.uk"
+authors: ["John Whitington"]
+homepage: "http://github.com/johnwhitington/camlpdf"
+bug-reports: "http://github.com/johnwhitington/camlpdf/issues"
+dev-repo: "git://github.com/johnwhitington/camlpdf"
+build: [[make]]
+install: [[make "install"]]
+patches: [
+  "patch-ocamlmakefile-camlpdf.2.1.1" {os = "win32"}
+  "int.patch"
+]
+remove: [["ocamlfind" "remove" "camlpdf"]]
+depends: ["ocamlfind"]
+available: [ocaml-version < "4.06.0"]

@@ -1,0 +1,17 @@
+opam-version: "1.2"
+maintainer: "anil@recoil.org"
+author: "anil@recoil.org"
+homepage: "http://gnu.org/software/emacs"
+bug-reports: "https://github.com/ocaml/opam-repository/issues"
+license: "GPL"
+build: [ ]
+depexts: [
+  [["debian"] ["emacs-nox"]]
+  [["ubuntu"] ["emacs"]]
+  [["centos"]["emacs-nox"]]
+  [["rhel"] ["emacs-nox"]]
+  [["fedora"] ["emacs-nox"]]
+  [["alpine"] ["emacs-nox"]]
+  [["opensuse"] ["emacs-nox"]]
+  [["oraclelinux"] ["emacs-nox"]]
+]

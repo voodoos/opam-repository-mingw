@@ -1,0 +1,25 @@
+opam-version: "1.2"
+maintainer: "https://github.com/ocaml/opam-repository/issues"
+authors: ["Xavier Clerc"]
+homepage: "http://bisect.x9c.fr/"
+license: "GPL v3"
+build: [
+  ["sh" "configure" "-ocaml-prefix" prefix "-ocamlfind" "%{bin}%/ocamlfind"] 
+    {ocaml-version != "4.00.1"}
+  ["sh" "configure" "-ocaml-prefix" prefix "-ocamlfind" "%{bin}%/ocamlfind" "-ppx"]
+    {ocaml-version = "4.00.1"}
+  [make "all"]
+]
+install: [
+  [make "install"]
+  ["sh.exe" "-c" "if [ -f '%{bin}%/bisect-report' ] && [ ! -f '%{bin}%/bisect-report.exe' ] ; then mv '%{bin}%/bisect-report' '%{bin}%/bisect-report.exe' ; fi" ] { os = "win32" }
+  ["sh.exe" "-c" "if [ -f '%{bin}%/bisect-report.opt' ] && [ ! -f '%{bin}%/bisect-report.opt.exe' ] ; then mv '%{bin}%/bisect-report.opt' '%{bin}%/bisect-report.opt.exe' ; fi" ] { os = "win32" }
+]
+remove: [["ocamlfind" "remove" "bisect"]]
+depends: [
+  "ocamlfind"
+  "camlp4"
+  "ocamlbuild" {build}
+]
+patches: ["patch-bisect-1.3"]
+available: [ocaml-version < "4.06.0"]

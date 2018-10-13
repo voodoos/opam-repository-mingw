@@ -1,0 +1,17 @@
+opam-version: "1"
+maintainer: "unixjunkie@sdf.org"
+homepage: "http://zeromq.org/"
+license: "LGPL"
+build: [
+  ["cc" "test.c" "-I/usr/local/include" "-L/usr/local/lib" "-lzmq"] { os != "win32" }
+  ["dash" "-ecx" "cc=$(ocamlc -config | awk -F '[\r\t ]+' '/^bytecomp_c_compiler/ {for(i=2;i<=NF;i++) printf \"%s \" ,$i}') ; $cc test.c -lzmq" ] { os = "win32" }
+]
+depexts: [
+  [["debian"] ["libzmq3-dev"]]
+  [["ubuntu"] ["libzmq3-dev"]]
+  [["osx" "homebrew"] ["zeromq"]]
+  [["alpine"] ["zeromq-dev"]]
+  [["win32" "cygwinports"] ["zeromq"]]
+  [["centos"] ["zeromq-devel"]]
+  [["fedora"] ["zeromq-devel"]]
+]

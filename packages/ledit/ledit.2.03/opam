@@ -1,0 +1,13 @@
+opam-version: "1"
+maintainer: "https://github.com/ocaml/opam-repository/issues"
+build: make
+depends: ["camlp5"]
+install: [
+  make
+  "install"
+  "LIBDIR=%{lib}%/ledit"
+  "MANDIR=%{man}%/man1"
+  "BINDIR=%{bin}%"
+]
+
+available: ocaml-version < "4.06.0" & os != "win32"
