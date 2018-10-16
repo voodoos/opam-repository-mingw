@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "opam 2.0"
+date:   2018-10-16 15:25:00
+---
+
+The repository has been upgraded to opam 2.0 format and the
+[installation instructions](/opam-repository-mingw/installation/) have
+been updated for the new opam version.
+
+Upgrading an existing `~/.opam` folder is not supported, just rename
+or delete the directory and let opam create a new one.

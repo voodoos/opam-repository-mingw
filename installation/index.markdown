@@ -9,10 +9,10 @@ There are two ways to setup this opam repository:
 
 You can try the graphical installer:
 
-* [32-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.1/OCaml32.exe)
-  (updated 06. May 2018)
-* [64-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.1/OCaml64.exe)
-  (updated 06. May 2018)
+* [32-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.2/OCaml32.exe)
+  (updated 14. Okt 2018)
+* [64-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.2/OCaml64.exe)
+  (updated 14. Okt 2018)
 
 The installer will first create a customized cygwin environment and
 then set up opam and OCaml inside this environment. The setup should
@@ -24,10 +24,10 @@ installed. The 32-bit version is not longer recommended)
 ## Manual Installation
 
 * Download links:
-  * [32-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.1/opam32.tar.xz)
-    (updated 06. May 2018)
-  * [64-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.1/opam64.tar.xz)
-    (updated 06. May 2018)
+  * [32-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.2/opam32.tar.xz)
+    (updated 14. Okt 2018)
+  * [64-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.2/opam64.tar.xz)
+    (updated 14. Okt 2018)
 
 * Install [cygwin](https://cygwin.com/) and install the following
   additional packages through cywin's setup utility: rsync, patch,
@@ -50,9 +50,9 @@ installed. The 32-bit version is not longer recommended)
 {% highlight bash %}
 tar -xf 'opam32.tar.xz' # or tar -xf 'opam64.tar.xz'
 bash opam32/install.sh  # --prefix /usr/foo, the default prefix is /usr/local
-opam init mingw 'https://github.com/fdopen/opam-repository-mingw.git' --comp 4.02.3+mingw32c --switch 4.02.3+mingw32c
+opam init default "https://github.com/fdopen/opam-repository-mingw.git#opam2" -c "ocaml-variants.4.07.1+mingw32c" --disable-sandboxing
 # or, if you prefer the 64-bit version
-opam init mingw 'https://github.com/fdopen/opam-repository-mingw.git' --comp 4.02.3+mingw64c --switch 4.02.3+mingw64c
+opam init default "https://github.com/fdopen/opam-repository-mingw.git#opam2" -c "ocaml-variants.4.07.1+mingw64c" --disable-sandboxing
 eval $(opam config env)
 {% endhighlight %}
 
@@ -60,9 +60,9 @@ The above commands will download and install precompiled versions of
 OCaml. You can also compile it from source: 
 
 {% highlight bash %}
-opam init mingw 'https://github.com/fdopen/opam-repository-mingw.git' --comp 4.02.3+mingw32 --switch 4.02.3+mingw32
+opam init default "https://github.com/fdopen/opam-repository-mingw.git#opam2" -c "ocaml-variants.4.07.1+mingw32c" --disable-sandboxing
 # or
-opam init mingw 'https://github.com/fdopen/opam-repository-mingw.git' --comp 4.02.3+mingw64 --switch 4.02.3+mingw64
+opam init default "https://github.com/fdopen/opam-repository-mingw.git#opam2" -c "ocaml-variants.4.07.1+mingw64c" --disable-sandboxing
 {% endhighlight %}
 
 There are also mingw-versions for the obsolete
