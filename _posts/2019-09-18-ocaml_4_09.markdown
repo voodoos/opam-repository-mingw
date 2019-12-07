@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "OCaml 4.09.0"
+date:   2019-09-18 12:00:00
+---
+
+OCaml version 4.09.0 is now available. There are six different switches:
+
+- `4.09.0+mingw32`
+- `4.09.0+mingw64`
+- `4.09.0+msvc32`
+- `4.09.0+msvc64`
+- `4.09.0+flambda+mingw32`
+- `4.09.0+flambda+mingw64`
+
+New OCaml releases are always added to the repository a couple of days
+after the official release. This page won't be updated each time :)
