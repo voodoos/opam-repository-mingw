@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "OCaml 4.10 released"
+date:   2020-02-22 12:15:00
+---
+
+OCaml version 4.10.0 is now available.
+
+Some of the highlights in this release are:
+
+* A new best-fit allocator for the major heap which reduces both GC
+  cost an memory usage.
+* Some preliminary runtime work for OCaml multicore
+* Immutable strings are now enforced at configuration time
+* User-defined indexing operators for multidimensional arrays
+* Coming soon: statmemprof, a new statistical memory profiler
+* The external API will be release next version
+* Various improvements to the manual
+* More precise exhaustiveness check for GADTs
+* Many bug fixes
+
+Check out the [official announcement
+thread](https://discuss.ocaml.org/t/ocaml-4-10-released/5194) for more
+details.
+
+As usually, there are six different switches:
+
+- `4.10.0+mingw32` / `4.10.0+mingw32c`
+- `4.10.0+mingw64` / `4.10.0+mingw64c`
+- `4.10.0+msvc32` / `4.10.0+msvc32c`
+- `4.10.0+msvc64` / `4.10.0+msvc64c`
+- `4.10.0+flambda+mingw32` / `4.10.0+flambda+mingw32c`
+- `4.10.0+flambda+mingw64` / `4.10.0+flambda+mingw64c`
