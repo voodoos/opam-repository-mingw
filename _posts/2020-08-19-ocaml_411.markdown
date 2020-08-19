@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "OCaml 4.11.0"
+date:   2020-08-19 20:45:00
+---
+
+OCaml version 4.11.0 is now available. Some of the highlights in this
+release are:
+
+* Statmemprof: a new statistical memory profiler
+* A new instrumented runtime that logs runtime statistics in a standard format
+* A native backend for the RISC-V architecture
+* Improved backtraces that refer to function names
+* Support for recursive and yet unboxed types
+* A quoted extension syntax for ppxs
+* Many quality of life improvements
+* Many bug fixes.
+
+The full list of change can be found in the [official announcement
+thread](https://discuss.ocaml.org/t/ocaml-4-11-0-released/6265).
+
+As usually, there are six different switches:
+
+- `4.11.0+mingw32` / `4.11.0+mingw32c`
+- `4.11.0+mingw64` / `4.11.0+mingw64c`
+- `4.11.0+msvc32` / `4.11.0+msvc32c`
+- `4.11.0+msvc64` / `4.11.0+msvc64c`
+- `4.11.0+flambda+mingw32` / `4.11.0+flambda+mingw32c`
+- `4.11.0+flambda+mingw64` / `4.11.0+flambda+mingw64c`
