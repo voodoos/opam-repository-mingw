@@ -19,7 +19,7 @@ then set up opam and OCaml inside this environment. The setup should
 be easy and fast this way. However, the installer won't allow you to
 set custom options: proxy configuration, select the initial OCaml
 version to install, etc. (If possible, the 64-bit version of cygwin is
-installed. The 32-bit version is not longer recommended)
+installed. The 32-bit version is no longer recommended)
 
 ## Manual Installation
 
