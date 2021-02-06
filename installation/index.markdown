@@ -10,9 +10,9 @@ There are two ways to setup this opam repository:
 You can try the graphical installer:
 
 * [32-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.2/OCaml32.exe)
-  (updated 18. Dec 2020)
+  (updated 06. Feb 2021)
 * [64-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.2/OCaml64.exe)
-  (updated 18. Dec 2020)
+  (updated 06. Feb 2021)
 
 The installer will first create a customized cygwin environment and
 then set up opam and OCaml inside this environment. The setup should
@@ -25,9 +25,9 @@ installed. The 32-bit version is not longer recommended)
 
 * Download links:
   * [32-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.2/opam32.tar.xz)
-    (updated 18. Dec 2020)
+    (updated 06. Feb 2021)
   * [64-bit](https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.2/opam64.tar.xz)
-    (updated 18. Dec 2020)
+    (updated 06. Feb 2021)
 
 * Install [cygwin](https://cygwin.com/) and install the following
   additional packages through cywin's setup utility: rsync, patch,
